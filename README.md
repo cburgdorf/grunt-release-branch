@@ -21,18 +21,18 @@ grunt.loadNpmTasks('grunt-release-branch');
 
 ## What is the problem with release branches aka `gh-pages` branches?
 
-When developing for the web, we usually have bunch of build steps which take care of concatenation, minification, inlining templates, generating html snapshots and so on and so on...
+When developing for the web, we usually have a bunch of build steps which take care of concatenation, minification, inlining templates, generating html snapshots and so on and so on...
 
-After running through all those steps, the final output is usually placed into an output directory that is not commited into version control. Following the `release branch pattern` we take this output and place it on an `orphan` branch, were some other mechanism can kick in and e.g. publish it as a website. That's exactly how it works with github as well.
+After running through all those steps, the final output is usually placed into an output directory that is not commited into version control. Following the `release branch pattern` we take this output and place it on an `orphan` branch, where another mechanism can kick in and e.g. publish it as a website. That's exactly how it works with github when using a `gh-pages` branch.
 
 This grunt plugin consits of two tasks to assist you for those scenarios.
 
 
 ## releaseBranchPre task
-This task should be run *before* all other build steps. It simply does `git branch -D gh-pages` and `git checkout -b gh-pages` under the covers. Please note that the branch name can be configured with the `releaseBranch` option.
+This task should run *before* all other build steps. It simply does `git branch -D gh-pages` and `git checkout -b gh-pages` under the covers. Please note that the branch name can be configured with the `releaseBranch` option.
 
 ## releaseBranch task
-This task should run as the last command in your build orchestration. It erases everything it moves all the files from your output directory to the root level of your working directory while deleting *all* other stuff except your .git folder. It than optionally commits and pushs using the `--force` parameter.
+This task should run as the last command in your build orchestration. It moves all the files from your output directory to the root level of your working directory while deleting *all* other stuff except your .git folder. It than optionally commits and pushs using the `--force` parameter.
 
 
 ## configuring the htmlSnapshot task
@@ -72,4 +72,5 @@ This task should run as the last command in your build orchestration. It erases 
 
 ## Release History
 
+- 0.1.1 - fixed race condition
 - 0.1.0 - Initial release
