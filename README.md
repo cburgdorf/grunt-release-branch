@@ -35,7 +35,7 @@ This task should run *before* all other build steps. It simply does `git branch 
 This task should run as the last command in your build orchestration. It moves all the files from your output directory to the root level of your working directory while deleting *all* other stuff except your .git folder. It than optionally commits and pushs using the `--force` parameter.
 
 
-## configuring the htmlSnapshot task
+## configuration
 
 ```js
 
