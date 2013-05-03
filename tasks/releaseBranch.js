@@ -66,19 +66,19 @@ module.exports = function(grunt) {
             
             contents.forEach(function(name, index){
                 if (blacklist.indexOf(name) === -1){
-                    fs.lstat(name, function(err, stats) {
-                        if (!err && stats.isDirectory()) {
-                            grunt.log.writeln('delete directory: ' + name);
-                            rmdirRec(name);
-                        }
-                        else{
-                            grunt.log.writeln('delete file: ' + name);
-                            fs.unlink(name);
-                        }
-                    });
+                    var stats = fs.lstatSync(name);
+
+                    if (!err && stats.isDirectory()) {
+                        grunt.log.writeln('delete directory: ' + name);
+                        rmdirRec(name);
+                    }
+                    else{
+                        grunt.log.writeln('delete file: ' + name);
+                        fs.unlinkSync(name);
+                    }
                 }
             });
-
+            grunt.log.writeln('now moving files from ' + options.distDir + ' to root level');
             //move all files from the dist dir to the root level
             exec('mv ' + options.distDir + '/* .', function(){
 
