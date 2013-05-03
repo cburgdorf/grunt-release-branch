@@ -1,0 +1,18 @@
+{
+  "name": "grunt-release-branch",
+  "version": "0.1.0",
+  "description": "A grunt task that makes working with release branches (aka gh-pages) a breeze\"",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "https://github.com/cburgdorf/grunt-release-branch.git",
+  "keywords": [
+    "gruntplugin",
+    "gh-pages",
+    "release",
+    "branch"
+  ],
+  "author": "Christoph Burgdorf",
+  "license": "MIT"
+}
