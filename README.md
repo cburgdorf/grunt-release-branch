@@ -70,7 +70,47 @@ This task should run as the last command in your build orchestration. It moves a
     });
 ```
 
+## What if my dist is in a subfolder?
+
+Use the `cwd` option to point the way to the root folder of your repository and then set the `dist` folder relative to the root folder of your repository.
+
+```js
+
+
+    var releaseBranchOptions = app: {
+                                        options: {
+                                            //the name of the orphan branch. Default is gh-pages
+                                            releaseBranch: 'gh-pages',
+                                            //the name of the remote repository. Default is origin
+                                            remoteRepository: 'origin',
+                                            //point the way to the root folder of your repository (default is .)
+                                            cwd: '../',
+                                            //the name of the output directory. Default is dist
+                                            distDir: 'app/dist',
+                                            //the commit message to be used for the optional commit
+                                            commitMessage: 'RELEASE',
+                                            //should files be automatically commited on the orphan branch
+                                            commit: true
+                                            //should the orphan branch be pushed to the remote repository
+                                            //default is false
+                                            push: true
+                                            //a blacklist of things to keep on the root level. By default only
+                                            //the .git folder will be kept.
+                                            blacklist: [
+                                                '.git'
+                                            ]
+                                        }
+                                    };
+
+
+    grunt.initConfig({
+        releaseBranchPre: releaseBranchOptions,
+        releaseBranch: releaseBranchOptions
+    });
+```
+
 ## Release History
 
+- 0.2.0 - added support for cwd option
 - 0.1.1 - fixed race condition
 - 0.1.0 - Initial release

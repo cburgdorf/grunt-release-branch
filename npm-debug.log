@@ -1,0 +1,132 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'publish' ]
+2 info using npm@1.2.32
+3 info using node@v0.10.12
+4 verbose publish [ '.' ]
+5 verbose read json /Users/cburgdorf/Documents/hacking/grunt-release-branch/package.json
+6 verbose cache add [ '.', null ]
+7 verbose cache add name=undefined spec="." args=[".",null]
+8 verbose parsed url { protocol: null,
+8 verbose parsed url   slashes: null,
+8 verbose parsed url   auth: null,
+8 verbose parsed url   host: null,
+8 verbose parsed url   port: null,
+8 verbose parsed url   hostname: null,
+8 verbose parsed url   hash: null,
+8 verbose parsed url   search: null,
+8 verbose parsed url   query: null,
+8 verbose parsed url   pathname: '.',
+8 verbose parsed url   path: '.',
+8 verbose parsed url   href: '.' }
+9 silly lockFile 3a52ce78- .
+10 verbose lock . /Users/cburgdorf/.npm/3a52ce78-.lock
+11 verbose read json package.json
+12 verbose tar pack [ '/var/folders/pl/61jdp4r14cv11qqdkmsxqnh40000gn/T/npm-33092/1378388219838-0.5991652195807546/tmp.tgz',
+12 verbose tar pack   '.' ]
+13 verbose tarball /var/folders/pl/61jdp4r14cv11qqdkmsxqnh40000gn/T/npm-33092/1378388219838-0.5991652195807546/tmp.tgz
+14 verbose folder .
+15 info prepublish grunt-release-branch@0.1.1
+16 silly lockFile 1f1177db-tar tar://.
+17 verbose lock tar://. /Users/cburgdorf/.npm/1f1177db-tar.lock
+18 silly lockFile 1f45317b-19838-0-5991652195807546-tmp-tgz tar:///var/folders/pl/61jdp4r14cv11qqdkmsxqnh40000gn/T/npm-33092/1378388219838-0.5991652195807546/tmp.tgz
+19 verbose lock tar:///var/folders/pl/61jdp4r14cv11qqdkmsxqnh40000gn/T/npm-33092/1378388219838-0.5991652195807546/tmp.tgz /Users/cburgdorf/.npm/1f45317b-19838-0-5991652195807546-tmp-tgz.lock
+20 silly lockFile 1f1177db-tar tar://.
+21 silly lockFile 1f1177db-tar tar://.
+22 silly lockFile 1f45317b-19838-0-5991652195807546-tmp-tgz tar:///var/folders/pl/61jdp4r14cv11qqdkmsxqnh40000gn/T/npm-33092/1378388219838-0.5991652195807546/tmp.tgz
+23 silly lockFile 1f45317b-19838-0-5991652195807546-tmp-tgz tar:///var/folders/pl/61jdp4r14cv11qqdkmsxqnh40000gn/T/npm-33092/1378388219838-0.5991652195807546/tmp.tgz
+24 verbose tar unpack /var/folders/pl/61jdp4r14cv11qqdkmsxqnh40000gn/T/npm-33092/1378388219838-0.5991652195807546/tmp.tgz
+25 silly lockFile 7c6b66db-19838-0-5991652195807546-package tar:///var/folders/pl/61jdp4r14cv11qqdkmsxqnh40000gn/T/npm-33092/1378388219838-0.5991652195807546/package
+26 verbose lock tar:///var/folders/pl/61jdp4r14cv11qqdkmsxqnh40000gn/T/npm-33092/1378388219838-0.5991652195807546/package /Users/cburgdorf/.npm/7c6b66db-19838-0-5991652195807546-package.lock
+27 silly lockFile 1f45317b-19838-0-5991652195807546-tmp-tgz tar:///var/folders/pl/61jdp4r14cv11qqdkmsxqnh40000gn/T/npm-33092/1378388219838-0.5991652195807546/tmp.tgz
+28 verbose lock tar:///var/folders/pl/61jdp4r14cv11qqdkmsxqnh40000gn/T/npm-33092/1378388219838-0.5991652195807546/tmp.tgz /Users/cburgdorf/.npm/1f45317b-19838-0-5991652195807546-tmp-tgz.lock
+29 silly gunzTarPerm modes [ '755', '644' ]
+30 silly gunzTarPerm extractEntry package.json
+31 silly gunzTarPerm extractEntry README.md
+32 silly gunzTarPerm extractEntry LICENSE-MIT
+33 silly gunzTarPerm extractEntry tasks/releaseBranch.js
+34 verbose read json /var/folders/pl/61jdp4r14cv11qqdkmsxqnh40000gn/T/npm-33092/1378388219838-0.5991652195807546/package/package.json
+35 silly lockFile 7c6b66db-19838-0-5991652195807546-package tar:///var/folders/pl/61jdp4r14cv11qqdkmsxqnh40000gn/T/npm-33092/1378388219838-0.5991652195807546/package
+36 silly lockFile 7c6b66db-19838-0-5991652195807546-package tar:///var/folders/pl/61jdp4r14cv11qqdkmsxqnh40000gn/T/npm-33092/1378388219838-0.5991652195807546/package
+37 silly lockFile 1f45317b-19838-0-5991652195807546-tmp-tgz tar:///var/folders/pl/61jdp4r14cv11qqdkmsxqnh40000gn/T/npm-33092/1378388219838-0.5991652195807546/tmp.tgz
+38 silly lockFile 1f45317b-19838-0-5991652195807546-tmp-tgz tar:///var/folders/pl/61jdp4r14cv11qqdkmsxqnh40000gn/T/npm-33092/1378388219838-0.5991652195807546/tmp.tgz
+39 verbose from cache /var/folders/pl/61jdp4r14cv11qqdkmsxqnh40000gn/T/npm-33092/1378388219838-0.5991652195807546/package/package.json
+40 verbose tar pack [ '/Users/cburgdorf/.npm/grunt-release-branch/0.1.1/package.tgz',
+40 verbose tar pack   '/var/folders/pl/61jdp4r14cv11qqdkmsxqnh40000gn/T/npm-33092/1378388219838-0.5991652195807546/package' ]
+41 verbose tarball /Users/cburgdorf/.npm/grunt-release-branch/0.1.1/package.tgz
+42 verbose folder /var/folders/pl/61jdp4r14cv11qqdkmsxqnh40000gn/T/npm-33092/1378388219838-0.5991652195807546/package
+43 silly lockFile 7c6b66db-19838-0-5991652195807546-package tar:///var/folders/pl/61jdp4r14cv11qqdkmsxqnh40000gn/T/npm-33092/1378388219838-0.5991652195807546/package
+44 verbose lock tar:///var/folders/pl/61jdp4r14cv11qqdkmsxqnh40000gn/T/npm-33092/1378388219838-0.5991652195807546/package /Users/cburgdorf/.npm/7c6b66db-19838-0-5991652195807546-package.lock
+45 silly lockFile 7e96d87c-release-branch-0-1-1-package-tgz tar:///Users/cburgdorf/.npm/grunt-release-branch/0.1.1/package.tgz
+46 verbose lock tar:///Users/cburgdorf/.npm/grunt-release-branch/0.1.1/package.tgz /Users/cburgdorf/.npm/7e96d87c-release-branch-0-1-1-package-tgz.lock
+47 silly lockFile 7c6b66db-19838-0-5991652195807546-package tar:///var/folders/pl/61jdp4r14cv11qqdkmsxqnh40000gn/T/npm-33092/1378388219838-0.5991652195807546/package
+48 silly lockFile 7c6b66db-19838-0-5991652195807546-package tar:///var/folders/pl/61jdp4r14cv11qqdkmsxqnh40000gn/T/npm-33092/1378388219838-0.5991652195807546/package
+49 silly lockFile 7e96d87c-release-branch-0-1-1-package-tgz tar:///Users/cburgdorf/.npm/grunt-release-branch/0.1.1/package.tgz
+50 silly lockFile 7e96d87c-release-branch-0-1-1-package-tgz tar:///Users/cburgdorf/.npm/grunt-release-branch/0.1.1/package.tgz
+51 silly lockFile 4e1b67a5-unt-release-branch-0-1-1-package /Users/cburgdorf/.npm/grunt-release-branch/0.1.1/package
+52 verbose lock /Users/cburgdorf/.npm/grunt-release-branch/0.1.1/package /Users/cburgdorf/.npm/4e1b67a5-unt-release-branch-0-1-1-package.lock
+53 silly lockFile 4e1b67a5-unt-release-branch-0-1-1-package /Users/cburgdorf/.npm/grunt-release-branch/0.1.1/package
+54 silly lockFile 4e1b67a5-unt-release-branch-0-1-1-package /Users/cburgdorf/.npm/grunt-release-branch/0.1.1/package
+55 verbose tar unpack /Users/cburgdorf/.npm/grunt-release-branch/0.1.1/package.tgz
+56 silly lockFile 45cb6096-unt-release-branch-0-1-1-package tar:///Users/cburgdorf/.npm/grunt-release-branch/0.1.1/package
+57 verbose lock tar:///Users/cburgdorf/.npm/grunt-release-branch/0.1.1/package /Users/cburgdorf/.npm/45cb6096-unt-release-branch-0-1-1-package.lock
+58 silly lockFile 7e96d87c-release-branch-0-1-1-package-tgz tar:///Users/cburgdorf/.npm/grunt-release-branch/0.1.1/package.tgz
+59 verbose lock tar:///Users/cburgdorf/.npm/grunt-release-branch/0.1.1/package.tgz /Users/cburgdorf/.npm/7e96d87c-release-branch-0-1-1-package-tgz.lock
+60 silly gunzTarPerm modes [ '755', '644' ]
+61 silly gunzTarPerm extractEntry package.json
+62 silly gunzTarPerm extractEntry README.md
+63 silly gunzTarPerm extractEntry LICENSE-MIT
+64 silly gunzTarPerm extractEntry tasks/releaseBranch.js
+65 verbose read json /Users/cburgdorf/.npm/grunt-release-branch/0.1.1/package/package.json
+66 silly lockFile 45cb6096-unt-release-branch-0-1-1-package tar:///Users/cburgdorf/.npm/grunt-release-branch/0.1.1/package
+67 silly lockFile 45cb6096-unt-release-branch-0-1-1-package tar:///Users/cburgdorf/.npm/grunt-release-branch/0.1.1/package
+68 silly lockFile 7e96d87c-release-branch-0-1-1-package-tgz tar:///Users/cburgdorf/.npm/grunt-release-branch/0.1.1/package.tgz
+69 silly lockFile 7e96d87c-release-branch-0-1-1-package-tgz tar:///Users/cburgdorf/.npm/grunt-release-branch/0.1.1/package.tgz
+70 verbose from cache /Users/cburgdorf/.npm/grunt-release-branch/0.1.1/package/package.json
+71 verbose chmod /Users/cburgdorf/.npm/grunt-release-branch/0.1.1/package.tgz 644
+72 verbose chown /Users/cburgdorf/.npm/grunt-release-branch/0.1.1/package.tgz [ 501, 20 ]
+73 silly lockFile 3a52ce78- .
+74 silly lockFile 3a52ce78- .
+75 silly publish { name: 'grunt-release-branch',
+75 silly publish   version: '0.1.1',
+75 silly publish   description: 'A grunt task that makes working with release branches (aka gh-pages) a breeze"',
+75 silly publish   main: 'Gruntfile.js',
+75 silly publish   scripts: { test: 'echo "Error: no test specified" && exit 1' },
+75 silly publish   repository:
+75 silly publish    { type: 'git',
+75 silly publish      url: 'https://github.com/cburgdorf/grunt-release-branch.git' },
+75 silly publish   keywords: [ 'gruntplugin', 'gh-pages', 'release', 'branch' ],
+75 silly publish   author: { name: 'Christoph Burgdorf' },
+75 silly publish   license: 'MIT',
+75 silly publish   readme: '# grunt-release-branch\n\n> A grunt task that makes working with release branches (aka gh-pages) a breeze\n\n\n\n## Getting Started\nThis plugin requires Grunt `~0.4.0`\n\nIf you haven\'t used [Grunt](http://gruntjs.com/) before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide, as it explains how to create a [Gruntfile](http://gruntjs.com/sample-gruntfile) as well as install and use Grunt plugins. Once you\'re familiar with that process, you may install this plugin with this command:\n\n```shell\nnpm install grunt-release-branch --save-dev\n```\n\nOnce the plugin has been installed, it may be enabled inside your Gruntfile with this line of JavaScript:\n\n```js\ngrunt.loadNpmTasks(\'grunt-release-branch\');\n```\n\n## What is the problem with release branches aka `gh-pages` branches?\n\nWhen developing for the web, we usually have a bunch of build steps which take care of concatenation, minification, inlining templates, generating html snapshots and so on and so on...\n\nAfter running through all those steps, the final output is usually placed into an output directory that is not commited into version control. Following the `release branch pattern` we take this output and place it on an `orphan` branch, where another mechanism can kick in and e.g. publish it as a website. That\'s exactly how it works with github when using a `gh-pages` branch.\n\nThis grunt plugin consits of two tasks to assist you for those scenarios.\n\n\n## releaseBranchPre task\nThis task should run *before* all other build steps. It simply does `git branch -D gh-pages` and `git checkout -b gh-pages` under the covers. Please note that the branch name can be configured with the `releaseBranch` option.\n\n## releaseBranch task\nThis task should run as the last command in your build orchestration. It moves all the files from your output directory to the root level of your working directory while deleting *all* other stuff except your .git folder. It than optionally commits and pushs using the `--force` parameter.\n\n\n## configuration\n\n```js\n\n\n    var releaseBranchOptions = app: {\n                                        options: {\n                                            //the name of the orphan branch. Default is gh-pages\n                                            releaseBranch: \'gh-pages\',\n                                            //the name of the remote repository. Default is origin\n                                            remoteRepository: \'origin\',\n                                            //the name of the output directory. Default is dist\n                                            distDir: \'dist\',\n                                            //the commit message to be used for the optional commit\n                                            commitMessage: \'RELEASE\',\n                                            //should files be automatically commited on the orphan branch\n                                            commit: true\n                                            //should the orphan branch be pushed to the remote repository\n                                            //default is false\n                                            push: true\n                                            //a blacklist of things to keep on the root level. By default only\n                                            //the .git folder will be kept.\n                                            blacklist: [\n                                                \'.git\'\n                                            ]\n                                        }\n                                    };\n\n\n    grunt.initConfig({\n        releaseBranchPre: releaseBranchOptions,\n        releaseBranch: releaseBranchOptions\n    });\n```\n\n## What if my dist is in a subfolder?\n\nUse the `cwd` option to point the way to the root folder of your repository and then set the `dist` folder relative to the root folder of your repository.\n\n```js\n\n\n    var releaseBranchOptions = app: {\n                                        options: {\n                                            //the name of the orphan branch. Default is gh-pages\n                                            releaseBranch: \'gh-pages\',\n                                            //the name of the remote repository. Default is origin\n                                            remoteRepository: \'origin\',\n                                            //point the way to the root folder of your repository (default is .)\n                                            cwd: \'../\',\n                                            //the name of the output directory. Default is dist\n                                            distDir: \'app/dist\',\n                                            //the commit message to be used for the optional commit\n                                            commitMessage: \'RELEASE\',\n                                            //should files be automatically commited on the orphan branch\n                                            commit: true\n                                            //should the orphan branch be pushed to the remote repository\n                                            //default is false\n                                            push: true\n                                            //a blacklist of things to keep on the root level. By default only\n                                            //the .git folder will be kept.\n                                            blacklist: [\n                                                \'.git\'\n                                            ]\n                                        }\n                                    };\n\n\n    grunt.initConfig({\n        releaseBranchPre: releaseBranchOptions,\n        releaseBranch: releaseBranchOptions\n    });\n```\n\n## Release History\n\n- 0.2.0 - added support for cwd option\n- 0.1.1 - fixed race condition\n- 0.1.0 - Initial release',
+75 silly publish   readmeFilename: 'README.md',
+75 silly publish   bugs: { url: 'https://github.com/cburgdorf/grunt-release-branch/issues' },
+75 silly publish   _id: 'grunt-release-branch@0.1.1',
+75 silly publish   dist: { shasum: 'f04c701650a866a8be3fae947730057629e208a1' },
+75 silly publish   _from: '.' }
+76 verbose url raw grunt-release-branch
+77 verbose url resolving [ 'https://registry.npmjs.org/', './grunt-release-branch' ]
+78 verbose url resolved https://registry.npmjs.org/grunt-release-branch
+79 info trying registry request attempt 1 at 15:37:02
+80 http PUT https://registry.npmjs.org/grunt-release-branch
+81 http 409 https://registry.npmjs.org/grunt-release-branch
+82 verbose url raw grunt-release-branch
+83 verbose url resolving [ 'https://registry.npmjs.org/', './grunt-release-branch' ]
+84 verbose url resolved https://registry.npmjs.org/grunt-release-branch
+85 info trying registry request attempt 1 at 15:37:03
+86 http GET https://registry.npmjs.org/grunt-release-branch
+87 http 200 https://registry.npmjs.org/grunt-release-branch
+88 error publish fail Cannot publish over existing version.
+88 error publish fail Update the 'version' field in package.json and try again.
+88 error publish fail
+88 error publish fail If the previous version was published in error, see:
+88 error publish fail     npm help unpublish
+88 error publish fail
+88 error publish fail To automatically increment version numbers, see:
+88 error publish fail     npm help version
+89 error System Darwin 12.4.0
+90 error command "node" "/usr/local/bin/npm" "publish"
+91 error cwd /Users/cburgdorf/Documents/hacking/grunt-release-branch
+92 error node -v v0.10.12
+93 error npm -v 1.2.32
+94 error code EPUBLISHCONFLICT
+95 verbose exit [ 1, true ]

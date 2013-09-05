@@ -9,9 +9,11 @@
 
 module.exports = function(grunt) {
 
-    var fs              = require("fs"),
+    var fs              = require('fs'),
+        path            = require('path'),
         exec            = require('child_process').exec,
         defaultOptions  = {
+            cwd: '.',
             releaseBranch: 'gh-pages',
             remoteRepository: 'origin',
             distDir: 'dist',
@@ -40,16 +42,28 @@ module.exports = function(grunt) {
     grunt.registerMultiTask('releaseBranch','release dist as branch', function(){
 
         var options = this.options(defaultOptions);
-
-        options.blacklist.push(options.distDir);
         var blacklist = options.blacklist;
+        var cwd = options.cwd;
+        var distContainer;
+
+        process.chdir(cwd);
+
+        if (options.distDir.indexOf(path.sep)){
+            //if the dist is in a subdir like 'app/dist' we need to
+            //blacklist the containing folder (e.g. app)
+            distContainer = options.distDir.split(path.sep)[0];
+            blacklist.push(distContainer);
+        }
+        else{
+            blacklist.push(options.distDir);
+        }
 
         var rmdirRec = function(path) {
             var files = [];
             if( fs.existsSync(path) ) {
                 files = fs.readdirSync(path);
                 files.forEach(function(file,index){
-                    var curPath = path + "/" + file;
+                    var curPath = path + '/' + file;
                     if(fs.statSync(curPath).isDirectory()) { // recurse
                         rmdirRec(curPath);
                     } else { // delete file
@@ -83,7 +97,7 @@ module.exports = function(grunt) {
             exec('mv ' + options.distDir + '/* .', function(){
 
                 //now that everything has been moved. Delete the dist dir
-                rmdirRec(options.distDir);
+                rmdirRec(distContainer || options.distDir);
                 
                 if (options.commit){
 
