@@ -27,6 +27,9 @@ After running through all those steps, the final output is usually placed into a
 
 This grunt plugin consits of two tasks to assist you for those scenarios.
 
+**ATTENTION:**
+This task assumes that you have an origin named `origin` (which is the default origin name that is chosen by git when cloning a repository) if you don't specify another origin.
+
 
 ## releaseBranchPre task
 This task should run *before* all other build steps. It simply does `git branch -D gh-pages` and `git checkout -b gh-pages` under the covers. Please note that the branch name can be configured with the `releaseBranch` option.
