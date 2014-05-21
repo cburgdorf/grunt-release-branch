@@ -32,7 +32,7 @@ module.exports = function(grunt) {
         var done = this.async();
 
         var releaseBranch = options.releaseBranch;
-        exec('git branch -D ' +  releaseBranch + '; git checkout -b ' + releaseBranch, options.execOptions, function(){
+        exec('git branch -D ' +  releaseBranch + '; git checkout --orphan ' + releaseBranch, options.execOptions, function(){
             done();
         });
 
