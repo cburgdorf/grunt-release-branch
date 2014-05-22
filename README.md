@@ -40,28 +40,33 @@ This task should run as the last command in your build orchestration. It moves a
 ```js
 
 
-    var releaseBranchOptions = app: {
-                                        options: {
-                                            //the name of the orphan branch. Default is gh-pages
-                                            releaseBranch: 'gh-pages',
-                                            //the name of the remote repository. Default is origin
-                                            remoteRepository: 'origin',
-                                            //the name of the output directory. Default is dist
-                                            distDir: 'dist',
-                                            //the commit message to be used for the optional commit
-                                            commitMessage: 'RELEASE',
-                                            //should files be automatically commited on the orphan branch
-                                            commit: true
-                                            //should the orphan branch be pushed to the remote repository
-                                            //default is false
-                                            push: true
-                                            //a blacklist of things to keep on the root level. By default only
-                                            //the .git folder will be kept.
-                                            blacklist: [
-                                                '.git'
-                                            ]
-                                        }
-                                    };
+    var releaseBranchOptions = {
+      app: {
+        options: {
+            //the name of the orphan branch. Default is gh-pages
+            releaseBranch: 'gh-pages',
+            //the name of the remote repository. Default is origin
+            remoteRepository: 'origin',
+            //the name of the output directory. Default is dist
+            distDir: 'dist',
+            //the commit message to be used for the optional commit
+            commitMessage: 'RELEASE',
+            //should files be automatically commited on the orphan branch
+            commit: true,
+            //should the orphan branch be pushed to the remote repository
+            //default is false
+            push: true,
+            //should the branch be an orphan branch
+            //default is false
+            orphan: true,
+            //a blacklist of things to keep on the root level. By default only
+            //the .git folder will be kept.
+            blacklist: [
+                '.git'
+            ]
+        }
+      }
+    };
 
 
     grunt.initConfig({
@@ -77,30 +82,35 @@ Use the `cwd` option to point the way to the root folder of your repository and 
 ```js
 
 
-    var releaseBranchOptions = app: {
-                                        options: {
-                                            //the name of the orphan branch. Default is gh-pages
-                                            releaseBranch: 'gh-pages',
-                                            //the name of the remote repository. Default is origin
-                                            remoteRepository: 'origin',
-                                            //point the way to the root folder of your repository (default is .)
-                                            cwd: '../',
-                                            //the name of the output directory. Default is dist
-                                            distDir: 'app/dist',
-                                            //the commit message to be used for the optional commit
-                                            commitMessage: 'RELEASE',
-                                            //should files be automatically commited on the orphan branch
-                                            commit: true
-                                            //should the orphan branch be pushed to the remote repository
-                                            //default is false
-                                            push: true
-                                            //a blacklist of things to keep on the root level. By default only
-                                            //the .git folder will be kept.
-                                            blacklist: [
-                                                '.git'
-                                            ]
-                                        }
-                                    };
+    var releaseBranchOptions = {
+      app: {
+        options: {
+            //the name of the orphan branch. Default is gh-pages
+            releaseBranch: 'gh-pages',
+            //the name of the remote repository. Default is origin
+            remoteRepository: 'origin',
+            //point the way to the root folder of your repository (default is .)
+            cwd: '../',
+            //the name of the output directory. Default is dist
+            distDir: 'app/dist',
+            //the commit message to be used for the optional commit
+            commitMessage: 'RELEASE',
+            //should files be automatically commited on the orphan branch
+            commit: true,
+            //should the orphan branch be pushed to the remote repository
+            //default is false
+            push: true,
+            //should the branch be an orphan branch
+            //default is false
+            orphan: true,
+            //a blacklist of things to keep on the root level. By default only
+            //the .git folder will be kept.
+            blacklist: [
+                '.git'
+            ]
+        }
+      }
+    };
 
 
     grunt.initConfig({
