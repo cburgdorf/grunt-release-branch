@@ -20,6 +20,7 @@ module.exports = function(grunt) {
             commitMessage: 'RELEASE',
             commit: true,
             push: false,
+            orphan: false,
             blacklist: [
                 '.git'
             ]
@@ -32,7 +33,10 @@ module.exports = function(grunt) {
         var done = this.async();
 
         var releaseBranch = options.releaseBranch;
-        exec('git branch -D ' +  releaseBranch + '; git checkout -b ' + releaseBranch, options.execOptions, function(){
+
+        var checkoutOptions = options.orphan ? '--orphan ' : '-b '
+
+        exec('git branch -D ' +  releaseBranch + '; git checkout ' + checkoutOptions  + releaseBranch, options.execOptions, function(){
             done();
         });
 
@@ -77,7 +81,7 @@ module.exports = function(grunt) {
         var done = this.async();
 
         fs.readdir('.', function(err, contents){
-            
+
             contents.forEach(function(name, index){
                 if (blacklist.indexOf(name) === -1){
                     var stats = fs.lstatSync(name);
@@ -98,15 +102,15 @@ module.exports = function(grunt) {
 
                 //now that everything has been moved. Delete the dist dir
                 rmdirRec(distContainer || options.distDir);
-                
+
                 if (options.commit){
 
                     grunt.log.writeln('commiting files as: ' + options.commitMessage);
-                    
+
                     exec('git add -A && git commit -m "' + options.commitMessage + '"', function(){
-                        
+
                         if (options.push){
-                            
+
                             grunt.log.writeln('pushing commit to: ' + options.releaseBranch);
                             exec('git push -f ' + options.remoteRepository + ' ' + options.releaseBranch, function(){
                                 done();
